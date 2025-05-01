@@ -1,19 +1,26 @@
 name: code-format-checks
-on:
-    pull_request:
-        branches:
-            - main
-        types:
-            - opened
-            - synchronize
-jobs:
-    formatting-checks:
-        runs-on: ubuntu-latest
-        container:
-            image: falta/node-prettier:latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
 
-            - name: Check JS file formatting
-              run: prettier . --check
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+jobs:
+  formatting-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Prettier check
+        run: npx prettier . --check
+
