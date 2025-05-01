@@ -174,7 +174,7 @@
 			{#each financiamiento as financiamientos}
 				<div class="z-10 mb-12 flex w-full items-center text-center text-white">
 					<div
-						class=" bg-secondary hidden h-24 w-24 min-w-24 items-center justify-center rounded-full border-4 border-white p-3 md:block"
+						class=" bg-red-400 hidden h-24 w-24 min-w-24 items-center justify-center rounded-full border-4 border-white p-3 md:block"
 					>
 						<span class="text-base font-bold md:text-4xl lg:text-5xl">
 							{financiamientos.number}
@@ -185,7 +185,7 @@
 							{financiamientos.title}
 						</strong>
 						<p>{financiamientos.description}</p>
-					</div>
+		        	 	</div>
 				</div>
 			{/each}
 		</div>
