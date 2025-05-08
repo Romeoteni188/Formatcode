@@ -9,13 +9,22 @@ on:
 jobs:
   formatting-checks:
     runs-on: ubuntu-latest
+
     container:
       image: romeo188/formateador:latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check formatting
-        run: "--write \"src/**/*.svelte\""
+      - name: Show working directory and files
+        run: |
+          pwd
+          ls -la src
+
+      - name: Check Prettier version
+        run: pnpm prettier --version
+
+      - name: Check formatting of Svelte files
+        run: pnpm prettier --check "src/**/*.svelte"
 
