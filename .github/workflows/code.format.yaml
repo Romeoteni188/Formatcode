@@ -1,4 +1,4 @@
-name: code-format-checks
+name: code-format
 on:
   pull_request:
     branches:
