@@ -4,9 +4,7 @@ on:
   pull_request:
     branches:
       - main
-    types:
-      - opened
-      - synchronize
+    types: [opened, synchronize]
 
 jobs:
   formatting-checks:
