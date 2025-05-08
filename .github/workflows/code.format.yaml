@@ -10,7 +10,7 @@ jobs:
     formatting-checks:
         runs-on: ubuntu-latest
         container:
-            image: romeo188/formateador:1.1.1
+            image: romeo188/formateador:latest
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
