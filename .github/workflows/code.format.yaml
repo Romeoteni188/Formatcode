@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: romeo188/formateador:latest
+      image: romeo188/formateador:1.1.1
 
     steps:
       - name: Checkout code
