@@ -1,5 +1,4 @@
 name: code-format-checks
-
 on:
   pull_request:
     branches:
